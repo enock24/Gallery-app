@@ -1,5 +1,6 @@
 import datetime as dt
 from django.http  import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def welcome(request):
@@ -51,3 +52,7 @@ def past_days_photos(request,past_date):
         </html>
             '''
     return HttpResponse(html)
+
+# Create your views here.
+def welcome(request):
+    return render(request, 'welcome.html')    
