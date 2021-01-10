@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 from pathlib import Path
-# import cloudinary
-# import cloudinary.uploader
-# import cloudinary.api
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import os
 # import django_heroku
 # import dj_database_url
@@ -133,3 +133,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, "static"),
 ]
+
+cloudinary.config( 
+  cloud_name = "towett-enock-k", 
+  api_key = "189579317859654", 
+  api_secret = "cMQCXz6-RYZDhubJmA7dX3TdJsU" 
+)
