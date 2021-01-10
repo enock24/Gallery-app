@@ -1,6 +1,6 @@
 from django.db import models
-import cloudinary
-from cloudinary.models import CloudinaryField
+# import cloudinary
+# from cloudinary.models import CloudinaryField
 import datetime as dt
 
 
@@ -38,13 +38,14 @@ class Category(models.Model):
         return self.name 
 
 class Image(models.Model):
-    image = CloudinaryField('image')
+    # image = CloudinaryField('image')
     name = models.CharField(max_length=60)
     description = models.TextField()
     author = models.CharField(max_length=40, default='admin')
     date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete = models.CASCADE)
+    photo = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
     
     def save_image(self):
         self.save()
