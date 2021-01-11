@@ -2,6 +2,12 @@
 {% load bootstrap3 %}
 {% block content %}
 {{ block.super}}
+<style>
+    body{
+        background-color: rgb(122, 121, 120);
+    }
+</style>
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-">
@@ -11,7 +17,7 @@
             <!--Display all images  -->
             <div class="col-md-4" data-toggle="modal" data-target="#{{image.id}}">
                 <div class="card card2">
-                    <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
+                    <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img" height="400 px" width="400 px">
                 </div>
             </div>
 

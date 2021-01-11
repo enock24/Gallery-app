@@ -9,7 +9,7 @@ To get the project .......
   
 ##### Cloning the repository:  
  ```bash 
-https://github.com/chepkiruibetty/gallery-inn
+https://github.com/enock24/Gallery-app.git
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
